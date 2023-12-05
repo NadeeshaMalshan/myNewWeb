@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://cdn.jsdelivr.net/gh/vaibhav111tandon/vov.css@latest/vov.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body id="body"  >
+    <header>
+        
+        <nav id='nav'>
+        
+           
+            <div class='subdiv1'>
+                
+               <div class="links" id="navLink" >
+                    
+                    <a class='anc' id="a1" style="transition-delay: 0s;" href='#home'  >Home</a>
+                    <a class='anc' id="a2" style="transition-delay: 0.1s;" href='#about'  >About</a>
+                    <a class='anc' id="a3" style="transition-delay: 0.2s;" href='#services'  >Services</a>
+                    <a class='anc' id="a4" style="transition-delay: 0.3s;" href='#contact'  >Contact</a>
+                    
+                    
+                </div>
+               
+                <i class="bi bi-moon-fill" id="mode1" onclick='changeMode()' >
+
+                </i>
+               
+            </div>
+           
+        
+         </nav>
+    </header>
+
+
+    <div id="progressbar"></div>
+    <div class="scrollPath"></div>
+
+
+
+
+    <section class="home" id="home" >
+        <p id="greeting" class="greeting vov fade-in-up" >Hi! I am </p>
+        <p id="topic" class="topic vov fade-in-up">NADEESHA</p>
+
+        <div id="wrapper" class="vov fade-in-up">
+            <p id="im_a">I'm a </p>
+                <div class="words">
+                    <div class="wrapperInside">Web designer</div>
+                    <div class="wrapperInside">Web developer</div>
+                    <div class="wrapperInside">Programmer</div>
+                    <div class="wrapperInside">graphic designer</div>
+                    <div class="wrapperInside">Web designer</div>
+                </div>
+            </div>
+            <div class="downArrow vov fade-in-up">
+                
+            <a href="#about" id="homeArrow"><i class="bi bi-arrow-down"></i></a>
+            </div>
+            
+
+    </section>
+
+    <section class="sec2" id="about">
+        <div class="title"  data-aos="fade-up" data-aos-once='true'>
+            <div class="titleOne"><h2>About</h2></div>
+            <div class="titleTwo" id="titleTwo"><h2>ME</h2></div>
+            
+        </div>
+        <div class="discription" id="discription" >
+            <span data-aos="fade-up" data-aos-once='true'>
+            <p class="dis"  >I am Nadeesha Malshan, a talented frontend web developer and UI/UX designer based in Sri Lanka. I have a strong educational background from St. Aloysius College Ratnapura, which has helped me to hone my skills in coding, designing, and learning new technologies. My passion for creating beautiful and user-friendly websites is evident in my work, which showcases my attention to detail and commitment to delivering exceptional results. With my keen eye for design and deep understanding of user experience, I am a valuable asset to any team looking to create engaging and effective digital experiences. </p>
+            <a href="#contact"><button class="btn" type="button" >Contact me</button></a>
+        </span>
+           
+                        <img src="res/mylogo.png" class="mylogo" data-aos="fade-up" data-aos-once='true'/>
+                    
+        </div>
+        <div class="mySkills" id="mySkills" >
+
+            
+                <div class="title" id="subTitle1">
+                    <div  data-aos="fade-up" data-aos-once='true'>My SKILLS <i class="bi bi-arrow-down-right"></i></div>
+                </div>
+
+                    <div class="skills">
+                        <div class="subskills"  data-aos="fade-up" data-aos-once='true'>
+                            <div id="skillsText">
+                                <h3>HTML</h3>
+                                <p>95%</p>
+                            </div>
+                            <span class="bar"><span class="title html" ></span></span>
+                        </div>
+                        <div class="subskills" data-aos="fade-up" data-aos-once='true'>
+                            <div id="skillsText">
+                            <h3>CSS</h3>
+                            <p>90%</p>
+                            </div>
+                            <span class="bar"><span class="title css"></span></span>
+                        </div>
+                        <div class="subskills" data-aos="fade-up" data-aos-once='true'>
+                            <div id="skillsText">
+                            <h3>JavaScript</h3>
+                            <p>80%</p>
+                            </div>
+                            <span class="bar"><span class="title javascript"></span></span>
+                        </div>
+                    </div>
+
+                    <div class="skills">
+                        <div class="subskills" data-aos="fade-up" data-aos-once='true'>
+                            <div id="skillsText">
+                            <h3>Python</h3>
+                            <p>75%</p>
+                            </div>
+                            <span class="bar"><span class="title python"></span></span>
+                        </div>
+                        <div class="subskills" data-aos="fade-up" data-aos-once='true'>
+                            <div id="skillsText">
+                            <h3>Figma</h3>
+                            <p>85%</p>
+                            </div>
+                            <span class="bar"><span class="title figma"></span></span>
+                        </div>
+                        <div class="subskills" data-aos="fade-up" data-aos-once='true'>
+                            <div id="skillsText">
+                            <h3>Photoshop</h3>
+                            <p>70%</p>
+                            </div>
+                            <span class="bar"><span class="title photoshop"></span></span>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section class="sec3" id="services">
+        <div class="title"  data-aos="fade-up" data-aos-once='true'>
+           
+            <div class="titleTwo" id="titleThree"><H2>What</H2></div>
+            <div class="titleOne"><h2>CAN I DO?</h2></div>
+            
+        </div>
+
+        <div class="myServices">
+            <div class="myServiceContent" data-aos="fade-up" data-aos-once='true' >
+                <div class="serviceIcons " >
+                    <i class="fa-solid fa-laptop-code" ></i>
+                </div>
+                <h3 >front-end web development</h3>
+                <div class="ServiceAbout ">
+                    Need a front-end web developer for your website? I can help! Let's work together to create a website that looks great and functions smoothly.
+                </div>
+            </div>
+
+
+            <div class="myServiceContent"  data-aos="fade-up" data-aos-once='true' >
+                <div class="serviceIcons">
+                    <i class="fa-solid fa-pen-ruler"></i>
+                </div>
+                <h3>UI design</h3>
+                <div class="ServiceAbout">
+                    Need a UI designer? I can design user-friendly and attractive websites for you. Hire me and let’s create a great online experience for your visitors.
+                </div>
+            </div>
+
+
+            
+        </div>
+        <div class="projects" id="projects" data-aos="fade-up" data-aos-once='true'  >
+
+            
+            <div class="title" id="subTitle2"  data-aos="fade-up" data-aos-once='true'>
+                <div>My PROJECTS <i class="bi bi-arrow-down-right"></i>
+                </div>
+            </div>
+
+                <div class="projetList"  data-aos="fade-up" data-aos-once='true'   data-aos-anchor-placement="top-bottom">
+                    <div class="project1">
+                        <img src="res/nescafe.gif" alt="" srcset="" class="proImg">
+                        
+                        <p class="projectName"><a class='anc' id="a5" href="https://github.com/NadeeshaMalshan/NescafeConcept" target="_blank"> <i class="bi bi-arrow-up-right"></i> Nescafé (consept)</a></p>
+                        
+                    </div>
+                    <div class="project2">
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    </section>
+
+    <section class="sec4" id="contact" >
+        <div class="title"  data-aos="fade-up" data-aos-once='true'   data-aos-anchor-placement="top-bottom" >
+            <div class="titleTwo"id='titleFour' ><h2>Let's</h2></div>
+            <div class="titleOne" ><h2>CONNECT</h2></div>
+            
+        </div>
+
+        <div class="sec4Body">
+            <div class="form" data-aos="fade-up" data-aos-once='true'   data-aos-anchor-placement="top-bottom" >
+                Name: <input type="text" id="fullName" required><br>
+                Email: <input type="email" id="email_id"><br>
+                Message: <textarea  id="message"  required></textarea><br>
+                <button onclick="SendMail()" id="formBtn" class="btn">Send Email</button>
+            </div>
+
+            <div class="socialLinks" data-aos="fade-up" data-aos-once='true'    data-aos-anchor-placement="top-bottom">
+                <h3>Check out my SOCIAL</h3>
+                <a class="socialBtn" id="a6" href="https://www.facebook.com/nmnandanayake">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a class="socialBtn" id="a7" href="https://www.instagram.com/nmnandanayake">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a class="socialBtn" id="a8"  href="https://www.x.com/nmnandanayake">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a class="socialBtn" id="a9" href="https://www.threads.net/nmnandanayake">
+                    <i class="fa-brands fa-threads"></i>
+                </a>
+                <a class="socialBtn" id="a10" href="https://www.linkedin.com/in/nmnandanayake/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a class="socialBtn" id="a11" href="https://discordapp.com/users/800693532180086795">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+                <a class="socialBtn" id="a12"  href="https://github.com/NadeeshaMalshan/">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a class="socialBtn" id="a13" href="https://www.youtube.com/@NMalshan">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a class="socialBtn" id="a14" href="https://www.tiktok.com/@nmnandanayake">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        2023 <a class='footerlink' id="footerLink" href='https://linktr.ee/nmnandanayake'> @NMNandanayake</a>
+   </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init("YbJct_4l9qIuC-NOt");
+        })();
+        </script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
