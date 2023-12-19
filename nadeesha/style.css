@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Montserrat:wght@300&family=Poppins:wght@200;300;500&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Montserrat:wght@300&family=Poppins:wght@200;300;500&;family=Rubik&;display=swap&');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
 
 *
@@ -24,11 +24,112 @@ body{
    align-items: center;
    transition: 0.5s;
    color:black;
+   cursor: default;
+    -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   
    
 }
+    
+    
+    
+    
+ /*topBtn*/
 
+ .stt {
+   position: fixed;
+   right: 20px;
+   bottom: 20px;
+   display: flex;
+   width: 37px;
+   height: 37px;
+   padding: 5px;
+   cursor: pointer;
+   visibility: hidden;
+   opacity: 0;
+   transition: 0.3s ease-in-out; }
+ 
+ .stt:hover {
+   opacity: 1; }
+ 
+ .stt__active {
+   visibility: visible;
+   opacity: 0.5; }
+ 
+ .stt__block_black {
+   background-color: #000;
+   border-radius: 5%; }
+ 
+ .stt__block_black:before {
+   position: absolute;
+   top: 50%;
+   left: 40%;
+   display: block;
+   width: 20px;
+   height: 5px;
+   content: '';
+   background-color: #fff;
+   transform: translate(0, -50%) rotate(45deg); }
+ 
+ .stt__block_black:after {
+   position: absolute;
+   top: 50%;
+   right: 40%;
+   display: block;
+   width: 20px;
+   height: 5px;
+   content: '';
+   background-color: #fff;
+   transform: translate(0, -50%) rotate(-45deg); }
+ 
+ .stt__circle__black {
+   background-color: #000;
+   border-radius: 50%; }
+ 
+ .stt__circle__black:before {
+   position: absolute;
+   top: 50%;
+   left: 40%;
+   display: block;
+   width: 20px;
+   height: 5px;
+   content: '';
+   background-color: #fff;
+   transform: translate(0, -50%) rotate(45deg); }
+ 
+ .stt__circle__black:after {
+   position: absolute;
+   top: 50%;
+   right: 40%;
+   display: block;
+   width: 20px;
+   height: 5px;
+   content: '';
+   background-color: #fff;
+   transform: translate(0, -50%) rotate(-45deg); }
+ 
+ .stt__emoji {
+   border-radius: 50%;
+   opacity: 1; }
+ 
+ .stt__emoji:before {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+   font-size: 36px;
+   content: "\1F446"; }
+ 
+ 
+
+    
+    
+   
 /*nav*/
 
 nav{
@@ -36,30 +137,31 @@ nav{
    top: 0;
    left: 0;
    width: 100%;
-   padding: 15px;
+   
    
    font-family: 'DM Sans', sans-serif;
    transition: 0.5s;
-   z-index: 100000;
-   background-color: #ffffff;
+   z-index: 10000;
+   
    display: inline;
-   
-   
-
-   
-   
-}
-
-nav.sticky{
-   
    padding: 15px 15px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
 border-radius: 0 0 10px 10px;
 border:1px solid rgba(255, 255, 255, 0.18);
-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.149);
+   
+
+   
+   
 }
+    
+    
+    nav.hidden {
+   transform: translateY(-100px);
+ }
+
 
 
 
@@ -143,14 +245,40 @@ section{
 .home{
     
     
-    background:  linear-gradient(to right, #b993d6, #8ca6db);
-    background-size: 200% 200%;
-    animation: color 5s ease-in-out infinite;
+    
     margin: 50px  50px 50px 50px;
-    border-radius: 20px;
-    transition: 0.5s;
+  
     padding-left: 50px;
 }
+    
+    
+  .circle {
+   position: absolute;
+   background: linear-gradient(to right, #b993d6, #8ca6db);
+   background-size: 200% 200%;
+   animation: color 5s ease-in-out infinite, moveDown 1.5s ease-in-out forwards;
+   border-radius: 850px 0 0 850px;
+   z-index: -10;
+}
+
+.circle1 {
+   right: 0;
+   width: 450px;
+   height: 850px;
+}
+
+@keyframes moveDown {
+   0% {
+       transform: translateY(-1000px); /* Adjust the value as needed */
+   }
+
+   100% {
+      transform: translateY(0px); /* Adjust the value as needed */
+  }
+}
+
+    
+    
 
 @keyframes color {
    0%{
@@ -179,7 +307,7 @@ section{
 
 .topic{
    
-  color: black;
+  color: rgb(41, 11, 58);
   
        font-size: 150px;
        
@@ -204,7 +332,7 @@ section{
    color: black;
 }
 
-.downArrow .bi{
+.downArrow .fa-chevron-down{
   
    font-size: 50px;
  
@@ -212,7 +340,7 @@ section{
    border-radius: 100%;
    border-style:solid;
    border-color: transparent;
-   transition: 0.1s;
+   transition: 0.5s;
   
   
 
@@ -220,9 +348,10 @@ section{
   
 }
 
-.downArrow .bi:hover{
+.downArrow .fa-chevron-down:hover{
   
-   transition: 1s;
+   transition: 0.5s;
+   margin-top:20px;
   
   
    
@@ -548,7 +677,8 @@ animation: color 5s ease-in-out infinite;
    font-size: 20px;
    
   
-   margin: 50px;
+   margin-left: 50px;
+   margin-top: 50px;
    
    
 }
@@ -567,20 +697,22 @@ input, textarea{
 
 textarea{
    padding-top: 10px;
+     resize: none;
+
 }
 
-
-
+    
+    
 input{
   
    height: 50px;
    width: 500px;
    margin-bottom: 20px;
-   margin-left: 30px;
+  
 }
 
 #email_id{
-   margin-left: 35px;
+  
   
 }
 
@@ -588,13 +720,13 @@ input{
 #message{
   
    height: 250px;
-   width: 600px;
+   width: 500px;
 }
 
 .btn{
    position: relative;
    margin-top: 20px;
-   border-radius: 10px;
+   border-radius: 50px;
    font-family: 'Poppins', sans-serif;
    border-style: none;
    outline-style: none;
@@ -617,7 +749,7 @@ overflow: hidden;
 
 
 .btn:before{
-   content:' ';
+   content:'';
    position: absolute;
    height: 100px;
    width: 20px;
@@ -637,7 +769,7 @@ overflow: hidden;
 
 .socialLinks{
    font-size: 25px;
-   
+    text-align: center;
    justify-content: center;
    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
    backdrop-filter: blur(10px);
@@ -646,11 +778,13 @@ overflow: hidden;
    border:1px solid rgba(255, 255, 255, 0.18);
    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
    padding: 20px;
-  padding-top: 120px;
-   margin-bottom: 175px;
-   margin-top: 80px;
-   margin-left: 50px;
+  padding-bottom: 150px;
+  padding-top: 150px;
+   margin-bottom: 150px;
+  margin-top: 50px;
+   margin-left: 100px;
    transition-delay: 0.5s;
+    text-align:center;
 
 
 }
@@ -695,8 +829,6 @@ footer{
 
 
 
-
-
 /*anc animation*/
 
 
@@ -708,7 +840,7 @@ footer{
 
 
 .anc:after {
-   content: "";
+   content:'';
    position:absolute;
    background-color:  	#ad4adb;
    height: 3px;
@@ -756,45 +888,712 @@ footer{
 
 
 
-
 /*screen sizes*/
-@media (max-width:1450px){
-   .subskills{
-      margin-left: 20px
 
+/*desktop*/
+@media (max-width:1445px) {
 
+   .skills{
+      margin-left: 5px;
    }
 
-   #email_id{
+   .subskills{
+      margin: 45px;
+      padding: 45px;
+     
+      
+   }
 
+}
 
+@media (max-width:1385px) {
+   .subskills{
+      margin: 40px;
+      padding: 40px;
+     
+      
    }
 
    .socialLinks{
-      margin-left: 50px;
+      padding-top: 150px;
+   margin-bottom: 150px;
+  margin-top: 50px;
+   margin-left: 50px;
    }
+
+
+
 }
-@media (max-width:1350px){
+
+@media (max-width:1340px) {
    .subskills{
-      margin: 25px
+      margin: 35px;
+      padding: 35px;
+     
+      
    }
-}
 
 
-
-@media (max-width:1200px){
-   .mylogo{
-      margin-top: 90px;
+   @media (max-width:1304px) {
+      
+         .socialLinks{
+            padding-top: 150px;
+         margin-bottom: 150px;
+        margin-top: 50px;
+        
+         }
+      
+      }
    }
-}
 
 
-@media (max-width:980px) {
-   .topic{
-      font-size:120px ;
+
+   
+
+   
+
+
+@media (max-width:1290px) {
+   .subskills{
+      margin: 30px;
+      padding: 30px;
+      
+     
+      
    }
    
+   
+
+   .socialLinks{
+      padding-top: 150px;
+   margin-bottom: 150px;
+  
+  
+   }
+
 }
+
+
+@media (max-width:1210px) {
+   .subskills{
+      margin: 25px;
+      padding: 25px;
+      
+     
+      
+   }
+
+   .form{
+   
+      
+      margin-left: 20px;
+     
+      
+      
+      
+   }
+
+   input{
+  
+      
+      width: 400px;
+      
+   }
+   
+   
+   
+   #message{
+     
+      height: 250px;
+      width: 400px;
+   }
+
+}
+
+@media (max-width:1160px) {
+
+   .mylogo{
+  
+      border-radius: 100%;
+      height: 25%;
+      width: 25%;
+     
+      margin: 40px;
+
+   }
+   .subskills{
+      margin: 20px;
+      padding: 20px;
+      
+     
+      
+   }
+
+   
+
+}
+
+@media (max-width:1110px) {
+
+   .mylogo{
+  
+      border-radius: 100%;
+      height: 30%;
+      width: 30%;
+     
+      margin: 35px;
+
+   }
+   .subskills{
+      margin: 15px;
+      padding: 20px;
+      
+     
+      
+   }
+
+}
+
+@media (max-width:1075px) {
+   .subskills{
+      margin: 10px;
+      padding: 10px;
+      
+     
+      
+   }
+
+   input{
+  
+      
+      width: 350px;
+      
+   }
+   
+   
+   
+   #message{
+     
+      height: 250px;
+      width: 350px;
+   }
+
+
+}
+
+@media (max-width:1030px) {
+
+
+   .form{
+      margin-left: 10px;
+   }
+   input{
+  
+      
+      width: 325px;
+      
+   }
+   
+   
+   
+   #message{
+     
+      height: 250px;
+      width: 325px;
+   }
+
+}
+
+@media (max-width:1000px) {
+   .sec4Body{
+      display: flex;
+      flex-direction: column;
+   }
+
+   .form{
+      margin-left: 50px;
+   }
+   input{
+  
+      
+      width: 600px;
+      
+   }
+   
+   
+   
+   #message{
+     
+      height: 250px;
+      width: 600px;
+   }
+
+   .socialLinks{
+      font-size:20px;
+      margin-left: 10px;
+       text-align:center;
+        margin-right: 10px;
+       padding: 10px;
+     padding-top: 60px;
+        padding-bottom: 60px;
+   
+   
+   }
+
+}
+
+@media (max-width:990px) {
+
+
+   .topic{
+      font-size: 140px;
+   }
+   .subskills{
+      margin: 5px;
+      padding: 10px;
+      
+     
+      
+   }
+
+}
+
+
+@media (max-width:960px) {
+   
+   .skills{
+  
+      display: flex;
+      flex-direction: column;
+   
+    }
+
+    .subskills{
+      margin: 20px;
+      padding: 20px;
+      
+     
+      
+   }
+
+   .bar{
+     
+     
+      width: 750px;
+      
+      
+   }
+
+}
+   
+
+@media (max-width:940px) {
+
+
+   .topic{
+      font-size: 130px;
+   }
+   .bar{
+     
+     
+      width: 650px;
+      
+      
+   }
+
+   .myServiceContent{
+      margin: 20px;
+      padding: 50px;
+   }
+
+   .projects .title{
+      margin-top: 50px;
+   }
+
+
+   
+}
+
+
+@media (max-width:850px) {
+
+   .topic{
+      font-size: 120px;
+   }
+   .bar{
+     
+     
+      width: 550px;
+      
+      
+   }
+  
+   input{
+  
+      
+     
+      width: 500px;
+   }
+
+   #email_id{
+     
+   }
+
+   
+   
+   
+   
+   #message{
+     
+      height: 250px;
+      width: 500px;
+      margin-left: 0;
+     
+   }
+   .form{
+   
+      
+     
+      margin-left: 20px;
+      
+      
+      
+   }
+   
+   
+}
+
+@media (max-width:800px) {
+
+   .topic{
+      font-size: 110px;
+   }
+
+   .discription{
+      flex-direction: column-reverse;
+      
+   }
+
+   .dis{
+      margin: 30px;
+      
+        
+   }
+
+   .discription button{
+      margin-left: 280px;
+   }
+
+   .mylogo{
+  
+     
+      height: 50%;
+      width: 50%;
+     
+      margin-left: 185px;
+
+   }
+
+   
+
+   textarea{
+      margin-left: 65px;
+   }
+
+   .form{
+   
+      
+     
+      margin-left: 10px;
+      
+      
+      
+   }
+
+}
+
+
+@media (max-width:750px) {
+
+   .home{
+      margin: 40px;
+      margin-top: 50px;
+      padding-left: 20px;
+   }
+
+   .greeting{
+      font-size:25px ;
+
+   }
+
+   .topic{
+      font-size: 100px;
+   }
+
+   .discription button{
+      margin-left: 260px;
+   }
+
+   .mylogo{
+  
+     
+    
+      margin-left: 160px;
+
+   }
+   .bar{
+     
+     
+      width: 500px;
+      
+      
+   }
+
+   .myServices{
+      flex-direction: column;
+    }
+
+    .project1{
+   
+      margin: 20px;
+   }
+
+    .proImg{
+      width:580px;
+     
+      
+    }
+    
+   
+   
+}
+
+
+@media (max-width:700px) {
+
+   .topic{
+      font-size: 90px;
+   }
+
+   .title{
+      font-size: 30px;
+      
+
+   }
+   .mylogo{
+  
+     
+      margin-left: 150px;
+
+   }
+   .discription button{
+      margin-left: 240px;
+   }
+   .bar{
+     
+     
+      width: 450px;
+      
+      
+   }
+
+   .proImg{
+      width:500px;
+      
+    }
+
+
+    input{
+      margin-left: 0;
+    }
+
+    #message{
+     
+      
+      width: 500px;
+     
+   }
+
+    #email_id{
+      margin-left: 0;
+    }
+
+   
+}
+
+
+@media (max-width:650px) {
+
+   .topic{
+      font-size: 80px;
+   }
+   .mylogo{
+      height: 60%;
+      width: 60%;
+     
+      margin-left: 105px;
+
+   }
+   .discription button{
+      margin-left: 210px;
+   }
+   .bar{
+     
+     
+      width: 400px;
+      
+      
+   }
+
+   .proImg{
+      width:450px;
+      
+    }
+
+    #message{
+     
+      
+      width: 450px;
+     
+   }
+
+   input{
+  
+      
+      
+      width: 450px;
+   }
+}
+
+@media (max-width:600px) {
+
+   .topic{
+      font-size: 70px;
+   }
+   .mylogo{
+      
+      
+    
+      
+      margin-left: 95px;
+
+   }
+   .discription button{
+      margin-left: 190px;
+   }
+   .bar{
+     
+     
+      width: 350px;
+      
+      
+   }
+
+   .proImg{
+      width:400px;
+      
+    }
+
+    #message{
+     
+      
+      width: 420px;
+     
+   }
+
+   input{
+  
+      
+      
+      width: 420px;
+   }
+
+
+    
+
+   
+}
+
+@media (max-width:550px) {
+
+   .home{
+      margin: 30px;
+      margin-top: 50px;
+   }
+   .mylogo{
+  
+     
+      
+     text-align: center;
+      margin-left: 90px;
+
+   }
+   .discription button{
+      margin-left: 160px;
+   }
+   .bar{
+     
+     
+      width: 300px;
+      
+      
+   }
+
+   .proImg{
+      width:350px;
+      
+    }
+
+    #message{
+     
+      
+      width: 350px;
+     
+   }
+
+   input{
+  
+      
+      
+      width: 350px;
+   }
+
+   
+   
+}
+
+@media (max-width:500px) {
+
+   .mylogo{
+  
+      
+     
+     
+      margin-left: 80px;
+
+   }
+   .discription button{
+      margin-left: 135px;
+   }
+   .bar{
+     
+     
+      width: 250px;
+      
+      
+   }
+   .proImg{
+      width:300px;
+      
+    }
+
+   
+}
+
+
+
+
+
 
 
 
@@ -813,9 +1612,59 @@ footer{
       margin-top: 50px;
       padding-left: 20px;
    }
-   .topic{
-      font-size: 50px;
+    
+    .circle1{
+  
+     
+      width: 600px;
+      height: 1150px;
+  }
+
+
+   .greeting{
+      font-size:25px ;
+
    }
+
+   .topic{
+      font-size: 70px;
+   }
+
+   #im_a{
+      font-size: 18px;
+     
+   }
+
+   #wrapper{
+      font-size:18px ;
+      
+   }
+
+   .wrapperInside{
+      
+      padding-left: 9px;
+   }
+
+   .downArrow{
+      margin-top: 30px;
+     
+    
+    
+   }
+   
+  
+   
+   .downArrow .fa-chevron-down{
+     
+      font-size: 40px;
+    
+      
+     
+   
+      
+     
+   }
+   
    .subdiv1 .bi{
       margin-bottom: -20px;
    }
@@ -836,12 +1685,23 @@ footer{
       
    }
 
+   .dis{
+      margin: 10px;
+      
+         font-size: 18px;
+     
+   }
+
    .mylogo{
       height: 90%;
    width: 90%;
    margin-left: 15px;
    }
 
+
+   .discription button{
+      margin-left: 120px;
+   }
 
    .sec4Body{
       display: flex;
@@ -887,7 +1747,7 @@ footer{
       font-size: 18px;
       
      
-      margin: 20px;
+     
       
    }
        
@@ -936,3 +1796,222 @@ footer{
 
 
 }
+
+
+@media (max-width:417px) {
+
+
+
+   .greeting{
+      font-size:22px ;
+
+   }
+
+   .topic{
+      font-size: 65px;
+   }
+
+   #im_a{
+      font-size: 18px;
+     
+   }
+
+   
+
+   
+
+
+   .discription button{
+      margin-left: 115px;
+   }
+
+
+   .title{
+      font-size: 25px;
+   }
+
+
+
+}
+
+@media (max-width:415px) {
+   .topic{
+      font-size: 62px;
+   }
+}
+
+
+@media (max-width:394px) {
+   .topic{
+      font-size: 60px;
+   }
+
+   #formBtn{
+      margin-left: 86px;
+    }
+ 
+
+  
+}
+
+
+@media (max-width:391px) {
+   .topic{
+      font-size: 59px;
+   }
+   .discription button{
+      margin-left:100px;
+   }
+
+   
+}
+@media (max-width:361px) {
+   .anc{
+     
+      font-size: 15px;
+      margin-right: 10px;
+      
+   }
+
+   .greeting{
+      font-size: 19px;
+   }
+
+   .topic{
+      font-size: 55px;
+   }
+
+   #im_a{
+      font-size: 15px;
+     
+   }
+
+   #wrapper{
+      font-size:15px ;
+      
+   }
+
+   .wrapperInside{
+      
+      padding-left: 8px;
+   }
+
+   .downArrow{
+      margin-top: 20px;
+      
+     
+    
+    
+   }
+
+   .discription button{
+      margin-left:88px;
+   }
+
+
+   
+
+}
+    
+    
+    @media (max-width:361px) {
+   .anc{
+     
+      font-size: 15px;
+      margin-right: 10px;
+      
+   }
+
+   .greeting{
+      font-size: 19px;
+   }
+
+   .topic{
+      font-size: 55px;
+   }
+
+   #im_a{
+      font-size: 15px;
+     
+   }
+
+   #wrapper{
+      font-size:15px ;
+      
+   }
+
+   .wrapperInside{
+      
+      padding-left: 8px;
+   }
+
+   .downArrow{
+      margin-top: 20px;
+      
+     
+    
+    
+   }
+
+   .title{
+      font-size: 22px;
+   }
+
+
+   .discription button{
+      margin-left:88px;
+   }
+
+
+
+   .subskills{
+      margin: 20px;
+      padding: 20px;
+   }
+
+   .bar{
+     
+      height: 12px;
+      width: 220px;
+      
+    
+      
+   }
+   
+   .bar span{
+      height: 12px;
+   }
+
+   .proImg{
+      width:250px;
+      height:150px;
+      }
+
+   .form{
+      
+      
+      
+     
+      margin: 0px;
+      
+   }
+
+   input{
+      
+      height: 45px;
+     width: 300px;
+    
+     }
+     #message{
+       width: 300px;
+       }
+ 
+
+
+
+   #formBtn{
+      margin-left: 70px;
+    }
+
+}
+

@@ -12,6 +12,10 @@
 
 </head>
 <body id="body"  >
+
+    <div id="preloader">
+        <div class="loading"></div>
+    </div>
     <header>
         
         <nav id='nav'>
@@ -44,29 +48,42 @@
     <div class="scrollPath"></div>
 
 
+    
 
+    
+    
 
-    <section class="home" id="home" >
-        <p id="greeting" class="greeting vov fade-in-up" >Hi! I am </p>
-        <p id="topic" class="topic vov fade-in-up">NADEESHA</p>
-
-        <div id="wrapper" class="vov fade-in-up">
-            <p id="im_a">I'm a </p>
-                <div class="words">
-                    <div class="wrapperInside">Web designer</div>
-                    <div class="wrapperInside">Web developer</div>
-                    <div class="wrapperInside">Programmer</div>
-                    <div class="wrapperInside">graphic designer</div>
-                    <div class="wrapperInside">Web designer</div>
-                </div>
+    <section class="home " id="home" >
+        <div class="homeContent">
+            <div>
+                <p id="greeting" class="greeting vov fade-in-up" >Hi! I am </p>
             </div>
-            <div class="downArrow vov fade-in-up">
+            <div>
+                <p id="topic" class="topic vov fade-in-up">NADEESHA</p>
+            </div>
                 
-            <a href="#about" id="homeArrow"><i class="bi bi-arrow-down"></i></a>
+
+            <div id="wrapper" class="vov fade-in-up">
+                <p id="im_a">I'm a </p>
+                    <div class="words">
+                        <div class="wrapperInside">Web designer</div>
+                        <div class="wrapperInside">Web developer</div>
+                        <div class="wrapperInside">Programmer</div>
+                        <div class="wrapperInside">graphic designer</div>
+                        <div class="wrapperInside">Web designer</div>
+                    </div>
             </div>
-            
+        
+            <div class='downArrow vov fade-in-up'>
+                
+                <a href='#about' id='homeArrow'><i class='fa-solid fa-chevron-down'></i></a>
+                </div>
+        </div>
+            <div class="circle circle1" id="circle"></div>
+         
 
     </section>
+   
 
     <section class="sec2" id="about">
         <div class="title"  data-aos="fade-up" data-aos-once='true'>
@@ -209,9 +226,9 @@
 
         <div class="sec4Body">
             <div class="form" data-aos="fade-up" data-aos-once='true'   data-aos-anchor-placement="top-bottom" >
-                Name: <input type="text" id="fullName" required><br>
-                Email: <input type="email" id="email_id"><br>
-                Message: <textarea  id="message"  required></textarea><br>
+                 <input type="text" id="fullName" required placeholder="Your name"><br>
+                 <input type="email" id="email_id" placeholder="Your email" ><br>
+                 <textarea  id="message"  required placeholder="Your message"></textarea><br>
                 <button onclick="SendMail()" id="formBtn" class="btn">Send Email</button>
             </div>
 
@@ -248,9 +265,12 @@
         </div>
 
     </section>
+    <div class="stt stt__block_black"></div>
     <footer>
         2023 <a class='footerlink' id="footerLink" href='https://linktr.ee/nmnandanayake'> @NMNandanayake</a>
    </footer>
+
+   
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript"
